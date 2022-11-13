@@ -1,6 +1,7 @@
 const fs = require('fs'); 
 const http = require('http');
 const url = require('url');
+const slugify= require('slugify');
 const replaceTemplate = require('./modules/replaceTemplate')
 ///////////////////////////////////
 
@@ -68,7 +69,7 @@ const server = http.createServer((req,res)=>{
             'content-type': 'text/html',
             'my-own-header': 'hello-world'
         });
-        res.end('<h1>Page not found</h1>');
+        res.end('<h1>404</h1>');
     }
     // res.end('Hello from the server!')
 });
